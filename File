@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Rashuu ❤️</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+font-family:cursive;
+background:
+radial-gradient(circle,#fff5 2px,transparent 3px),
+linear-gradient(135deg,#ff8fab,#ffc2d1,#ffe5ec);
+background-size:40px 40px,cover;
+text-align:center;
+color:white;
+}
+
+.page{
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+padding:30px;
+animation:flip 1s;
+}
+
+.active{
+display:block;
+}
+
+@keyframes flip{
+from{
+transform:rotateY(90deg);
+opacity:0;
+}
+to{
+transform:rotateY(0);
+opacity:1;
+}
+}
+
+
+h1{
+text-shadow:0 0 20px #ff006e;
+}
+
+.photo{
+width:260px;
+max-height:300px;
+object-fit:cover;
+border:10px solid white;
+border-radius:20px;
+animation:drop 1.5s;
+box-shadow:0 0 30px #ff006e;
+}
+
+
+@keyframes drop{
+
+0%{
+transform:translateY(-500px) rotate(-20deg);
+opacity:0;
+}
+
+80%{
+transform:translateY(20px);
+}
+
+100%{
+transform:translateY(0);
+opacity:1;
+}
+
+}
+
+
+.box{
+background:#ffffff55;
+padding:20px;
+border-radius:25px;
+font-size:20px;
+margin-top:20px;
+backdrop-filter:blur(10px);
+}
+
+
+button{
+
+border:0;
+padding:15px 35px;
+border-radius:30px;
+font-size:20px;
+color:#ff4081;
+background:white;
+
+}
+
+
+.gift{
+
+font-size:120px;
+animation:bounce 1s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+transform:translateY(-25px);
+}
+
+}
+
+
+video{
+
+width:300px;
+border-radius:20px;
+box-shadow:0 0 30px white;
+
+}
+
+
+.flower{
+
+position:absolute;
+top:-50px;
+animation:fall 6s linear;
+font-size:25px;
+
+}
+
+
+@keyframes fall{
+
+to{
+top:110%;
+transform:rotate(360deg);
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page active">
+
+<h1>Hey Beautiful Mommy 🥺😭</h1>
+
+<h2>Rashuu shonaa... I made something for you ❤️</h2>
+
+<button onclick="next()">Open 💌</button>
+
+</div>
+
+
+
+<div class="page">
+
+<h1>A tiny world for my babe 🎁</h1>
+
+<div class="gift" onclick="next()">🎁</div>
+
+<h2>Tap the gift darlo ❤️</h2>
+
+</div>
+
+
+
+
+<div class="page">
+
+<img src="photo1.jpg" class="photo">
+
+<div class="box">
+
+My Rashuu shonaa ❤️<br><br>
+
+I don't know if this small website can show everything,
+but I wanted to make something that belongs only to you.
+
+Your little talks, your smile and your cute things
+have a special place in my heart 🥺❤️
+
+</div>
+
+<button onclick="next()">Next 🌹</button>
+
+</div>
+
+
+
+
+<div class="page">
+
+<img src="photo2.jpg" class="photo">
+
+<div class="box">
+
+Babe ❤️<br><br>
+
+Sometimes it's not about expensive gifts or big things.
+
+Small memories, random laughs and those tiny moments
+are the things I want to keep forever with my Rashuu ✨
+
+</div>
+
+<button onclick="next()">Next 💎</button>
+
+</div>
+
+
+
+
+<div class="page">
+
+<img src="photo3.jpg" class="photo">
+
+<h1>🌹💍📿🍫</h1>
+
+<div class="box">
+
+For my darlo 💕
+
+Flowers, earrings, Kashmiri bangles,
+rings, pendants and chocolates...
+
+You deserve every cute surprise in the world ❤️
+
+</div>
+
+<button onclick="next()">Memory 🎬</button>
+
+</div>
+
+
+
+
+<div class="page">
+
+<h1>Our little memories 🎥❤️</h1>
+
+
+<video controls>
+
+<source src="video1.mp4">
+
+</video>
+
+
+<div class="box">
+
+Some moments cannot be written,
+they can only be felt ❤️
+
+So I kept this memory here forever Rashuu 🥺
+
+</div>
+
+
+<button onclick="next()">Last 💌</button>
+
+</div>
+
+
+
+
+<div class="page">
+
+<img src="photo4.jpg" class="photo">
+
+
+<div class="box">
+
+Happy Girlfriend's Day my Rashuu ❤️
+
+Stay the same cute, special and amazing person.
+
+I hope this made you smile,
+because your smile was the reason I made it 🥺❤️
+
+</div>
+
+</div>
+
+
+
+
+<script>
+
+
+let p=document.querySelectorAll(".page");
+
+let i=0;
+
+
+function next(){
+
+p[i].classList.remove("active");
+
+i++;
+
+p[i].classList.add("active");
+
+}
+
+
+
+setInterval(()=>{
+
+
+let f=document.createElement("div");
+
+f.className="flower";
+
+f.innerHTML=["❤️","🌹","🌸","✨"][Math.floor(Math.random()*4)];
+
+f.style.left=Math.random()*100+"%";
+
+document.body.appendChild(f);
+
+setTimeout(()=>f.remove(),6000);
+
+
+},300);
+
+
+
+</script>
+
+
+</body>
+</html>
